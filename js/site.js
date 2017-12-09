@@ -6,6 +6,7 @@ function reloadhtml(){
   	if (url.includes("article")) {
   		article_url = url.replace("/#", "");
   		$.get(article_url, function(data){
+  		    console.log(imageurl);
         	$("#sidebar-content").html(data);
         });
   	} else {

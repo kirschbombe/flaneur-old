@@ -1,0 +1,12 @@
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  {% for page in site.pages %}
+    <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
+{% endfor %}
+<div class="dropdown-content">
+  {% for post in site.posts %}
+    <a href="#" onclick="someFunction(e)">{{post.title}}</a>
+{% endfor %}</div>
+  </div>
+</div>

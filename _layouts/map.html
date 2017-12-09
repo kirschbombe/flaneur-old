@@ -12,6 +12,7 @@
   	</script></div>
 
     <div id="map"></div>
+      {% include menu.html %}
 
     <script>
       // set up variables to use during jekyll loop
@@ -68,7 +69,6 @@ counter += 1;
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
         $.get("{{site.baseurl}}{{post.url}}", function(data){
-        	console.log(data);
         	$("#sidebar-content").html(data);
         });
       });
