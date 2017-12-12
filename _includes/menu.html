@@ -1,12 +1,15 @@
 <div class="dropdown">
   <button class="dropbtn">Dropdown</button>
   <div class="dropdown-content">
+  <a href="{{site.baseurl}}"></a>
   {% for page in site.pages %}
+  	{% if page.permalink != "/about" and page.title != "Home" %}
     <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
+    {% endif %}
 {% endfor %}
 <div class="dropdown-content">
   {% for post in site.posts %}
-    <a href="#" onclick="someFunction(e)">{{post.title}}</a>
+    <a onclick='onClick("{{post.url}}");'>{{post.title}}</a>
 {% endfor %}</div>
   </div>
 </div>
