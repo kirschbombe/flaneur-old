@@ -9,7 +9,7 @@
 {% endfor %}
 <div class="dropdown-content">
   {% for post in site.posts %}
-    <a onclick='onClick("{{post.url}}");'>{{post.title}}</a>
+    <a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a>
 {% endfor %}</div>
   </div>
 </div>
