@@ -1,7 +1,7 @@
 <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
+  <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
-  <a href="{{site.baseurl}}"></a>
+  <a href="{{site.baseurl}}/">Home</a>
   {% for page in site.pages %}
   	{% if page.permalink != "/about" and page.title != "Home" %}
     <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
