@@ -7,9 +7,11 @@
   	<div id="article">{% include sidebar.html %}
   	<script>
   	window.onload = function(){
-  	element = document.querySelectorAll("post-article");
   	reloadhtml();
   	};
+  	window.onhashchange = function() {
+	reloadhtml();
+	};
   	</script></div>
 
     <div id="map"></div>
