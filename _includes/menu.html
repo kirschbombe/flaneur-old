@@ -1,11 +1,11 @@
 <div class="dropdown">
-    <button class="btn dropdown-toggle" type="button" id="btnmenu" data-toggle="dropdown" aria-expanded="true">
+    <button class="btn dropdown-toggle" type="button" id="btnmenu" data-toggle="dropdown" aria-expanded="true">Menu 
     <span class="glyphicon glyphicon-menu-hamburger"></span>
     </button>
     <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="btnmenu">
   <li><a href="/flaneur/">Home</a></li>
 <li class="dropdown-submenu">
-    <a class="submenu-title">Articles</a>
+    <a class="submenu-title">Articles&nbsp; <i class="fa fa-caret-right" aria-hidden="true"></i></a> 
     <ul class="dropdown-menu dropdown-menu-left" id="submenu">
         {% for post in site.posts %}
     <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
