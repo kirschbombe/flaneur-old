@@ -1,6 +1,5 @@
 $(document).ready(function(){
   //console.log(map);
-  console.log($('.dropdown-submenu a.submenu-title'))
   $('.dropdown-submenu a.submenu-title').on("click", function(e){
     $(this).next('ul').toggle();
     e.stopPropagation();
@@ -21,12 +20,7 @@ function reloadhtml(){
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
-  	} else {
-  	about_url = url + "about/"
-  	$.get(about_url, function(data){
-  	$("#sidebar-content").html(data);
-  	 });
-  	}
+  	} 
 };
 
 function myFunction(){
