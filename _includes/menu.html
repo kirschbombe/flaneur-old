@@ -1,0 +1,30 @@
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="btnmenu" data-toggle="dropdown" aria-expanded="true">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="btnmenu">
+  <li><a href="/flaneur/">Home</a></li>
+<li class="dropdown-submenu">
+    <a class="submenu-title">Articles</a>
+    <ul class="dropdown-menu dropdown-menu-left" id="submenu">
+        {% for post in site.posts %}
+    <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+{% endfor %}
+    </ul>
+ {% for page in site.pages %}
+    {% if page.permalink != "/about" and page.title != "Home" %}
+    <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+    {% endif %}
+{% endfor %}
+</li></ul></div>
+
+
+<style>
+#submenu {
+  width: 300px; 
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+</style>
+

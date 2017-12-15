@@ -15,6 +15,7 @@
   	</script></div>
 
     <div id="map"></div>
+      {% include menu.html %}
 
     <script>
       // set up variables to use during jekyll loop
@@ -39,7 +40,7 @@ var icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_
 'noun_33862_cc_purple.svg', 'noun_33862_cc_black.svg',
 'noun_33862_cc_rose.svg', 'noun_33862_cc_teal.svg']
 var counter = -1;
-items = {};
+var items = {};
 {% for category in site.categories %}
 var layers = [];
 counter += 1;
@@ -88,6 +89,7 @@ counter += 1;
 var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 	compact: true,
 	collapsed: true,
+	position: 'topleft'
 });
 map.addControl(panelLayers);
 
