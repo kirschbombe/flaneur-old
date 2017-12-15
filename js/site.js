@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //console.log(map);
-  $('.dropdown-submenu a.submenu-title').on("click", function(e){
+  $('a.submenu-title').on("click", function(e){
     $(this).next('ul').toggle();
     e.stopPropagation();
     e.preventDefault();
