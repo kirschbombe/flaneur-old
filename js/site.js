@@ -1,5 +1,11 @@
 $(document).ready(function(){
-  console.log(map);
+  //console.log(map);
+  console.log($('.dropdown-submenu a.submenu-title'))
+  $('.dropdown-submenu a.submenu-title').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
 });
 function reloadhtml(){
   	url = window.location.href;
