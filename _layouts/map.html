@@ -20,9 +20,9 @@
     <script>
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
-          map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
+          map = L.map('map' , {scrollWheelZoom: false, zoomControl:false}).setView([0, 0], 1),
           markers = new L.featureGroup();
-      L.control.zoom({position: 'topright'});
+      L.control.zoom({position: 'topright'}).addTo(map);
       L.tileLayer('https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png', {
         "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>",
         "minZoom" : 0,
