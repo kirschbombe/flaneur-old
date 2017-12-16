@@ -20,7 +20,12 @@ function reloadhtml(){
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
-  	} 
+  	}  else if (url.includes('#') == true) {
+      page_url = url.replace("/#", "");
+      $.get(page_url, function(data){
+        $("#sidebar-content").html(data);
+      });
+    }
 };
 
 function myFunction(){
@@ -33,6 +38,7 @@ function myFunction(){
 
 function onClick(url){
     //bug where if not on map page can't get markers
+    if (url.includes("article")) {
       item_id = url;
       article_url = window.location.origin + window.location.pathname + item_id;
       marker = items[item_id];
@@ -43,6 +49,30 @@ function onClick(url){
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
+    } else {
+    	page_url = window.location.origin + window.location.pathname + url
+    	$.get(page_url, function(data){
+    		$("#sidebar-content").html(data);
+    	});
+    }
+}
+
+function openMenu() {
+	document.getElementById("drawer-menu").style.width = "20%";
+}
+function expand() {
+  submenu = document.getElementById("submenu")
+  if (submenu.style.height == '0px' | submenu.style.height == '') {
+    submenu.style.height = "70%";
+    submenu.style.overflow = 'scroll';
+  } else {
+    submenu.style.height = "0";
+    submenu.style.overflow = 'hidden';
+  }
+}
+
+function closeMenu() {
+	document.getElementById("drawer-menu").style.width = "0";
 }
 
 

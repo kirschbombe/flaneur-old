@@ -22,7 +22,7 @@
       var lat, lng, content, marker,
           map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
           markers = new L.featureGroup();
-      L.control.zoom({position: 'topright'});
+
       L.tileLayer('https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png', {
         "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>",
         "minZoom" : 0,
@@ -52,6 +52,7 @@ counter += 1;
 
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var iconurl = "{{site.baseurl}}/assets/leaflet/img/" + icons[counter]
+
       var mbox = L.icon({
             iconUrl: iconurl,
             iconSize : [32, 37],
@@ -93,7 +94,6 @@ var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 });
 map.addControl(panelLayers);
 map.setView([34.0253, -118.3085], 11)
-
 //map.fitBounds(markers.getBounds());
 
 </script>
