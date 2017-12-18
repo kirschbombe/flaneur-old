@@ -2,9 +2,9 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
     	<div id="sidebar-content">
-    	{% if page.layout == "about" %}
-    	{{ content }}
-    	{% endif %}
+	{% if page.title == "Home" %}
+    	{% include about.html %}
+    {% endif %}
   </div>
   </div>
 </div>

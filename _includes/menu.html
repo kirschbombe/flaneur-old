@@ -1,0 +1,20 @@
+ <span class="menu-button" onclick="openMenu()"><i class="fa fa-bars" aria-hidden="true"></i>
+</span>
+
+<div class="drawer-menu" id="drawer-menu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+<a href="/flaneur/">Home</a>
+ 
+ <a onclick="expand()" class="submenu-title">Articles</a>
+ <div class="submenu" id="submenu">
+ {% for post in site.posts %}
+<a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+{% endfor %}
+</div>
+{% for page in site.pages %}
+ {% if page.title != 'Home' %}
+<a href="{{site.baseurl}}/#{{page.url}}" onclick='onClick("{{page.url}}");'>{{page.title}}</a>
+ {% endif %}
+ {% endfor %}
+
+

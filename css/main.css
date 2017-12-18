@@ -11,13 +11,7 @@ body {
   width:60vw;
   height:100vh;
 }
-.page-content {
-	width: 60vw;
-	right: 0;
-}
-article.page-content {
-	width: 100vw;
-}
+
 .sidebar {
 	height:100vh;
 	width:40vw;
@@ -38,16 +32,6 @@ div#sidebar-content {
   padding-right: 3em;
   padding-top: 3em;
   padding-bottom: 3em;
-}
-div.page {
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-div.wrapper {
-	background-color: black;
-	color: white;
 }
 
 p.post-header {
@@ -110,6 +94,63 @@ img {
 li {
   margin-bottom: 8px;
 }
+a.submenu-title {
+  cursor: pointer;
+}
+
+
+.menu-button {
+  font-size:30px;
+  cursor:pointer;
+  position: absolute;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+}
+
+.drawer-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.drawer-menu a {
+    margin-left: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+.drawer-menu a:hover {
+    color: lightblue;
+}
+
+.drawer-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.submenu {
+  overflow:hidden;
+  height: 0px;
+}
+.submenu a {
+    display:block;
+    margin-left: 10px;
+    font-size: 15px;
+    
+}
 
 @media (max-width:768px) {
     #map {
@@ -132,6 +173,7 @@ li {
 	article.post-article {
 	max-height: 30vh;
 	}
+	
 	div.wrapper {
 		width: 100vw;
 		height: 40vh;
@@ -150,7 +192,16 @@ li {
         height: 50vh !important;
         width: 100vw
     }
-    
+    .dropdown {
+    position:absolute;
+    left: 1%;
+	}
+
+	.drawer-menu {
+		height: 30.5vh;
+		top: 0;
+	}
+
 
 }
 
@@ -170,11 +221,17 @@ li {
         position: absolute;
         right: 0;
     }
+    .dropdown {
+    position:absolute;
+    left: 0%;
+	}
+
+
     div.wrapper {
 		top: 0;
         width: 50vw;
         height: 100vh;
-		overflow: auto;
+		    overflow: auto;
 	}
 }
 
@@ -199,6 +256,10 @@ li {
         width: 45vw;
         right: 0;
     }
+    .dropdown {
+    position:absolute;
+    left: 0%;
+}
     div.wrapper {
 		left: 0;
         width: 55vw;
@@ -235,7 +296,6 @@ img.legend {
 img.article-marker {
 	height: 42px;
 	padding: 0px;
-	align:right;
 	cursor: pointer;
 	display: inline;
 	vertical-align: middle;
@@ -245,7 +305,10 @@ img.article-marker {
   font-size: 14px;
 }
 
+
 label.leaflet-panel-layers-title {
   font-family: "Barlow", sans-serif;
   text-transform: uppercase;
 }
+
+
