@@ -58,7 +58,7 @@ function onClick(url){
 }
 
 function openMenu() {
-	document.getElementById("drawer-menu").style.width = "20%";
+	document.getElementById("drawer-menu").style.width = "150px";
 }
 function expand() {
   submenu = document.getElementById("submenu")

@@ -104,6 +104,63 @@ img {
 li {
   margin-bottom: 8px;
 }
+a.submenu-title {
+  cursor: pointer;
+}
+
+
+.menu-button {
+  font-size:30px;
+  cursor:pointer;
+  position: absolute;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+}
+
+.drawer-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.drawer-menu a {
+    margin-left: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+.drawer-menu a:hover {
+    color: lightblue;
+}
+
+.drawer-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.submenu {
+  overflow:hidden;
+  height: 0px;
+}
+.submenu a {
+    display:block;
+    margin-left: 10px;
+    font-size: 15px;
+    
+}
 
 @media (max-width:768px) {
     #map {
@@ -150,6 +207,11 @@ li {
     .dropdown {
     position:absolute;
     left: 1%;
+	}
+
+	.drawer-menu {
+		height: 30.5vh;
+		top: 0;
 	}
 
 
@@ -261,59 +323,4 @@ label.leaflet-panel-layers-title {
   text-transform: uppercase;
 }
 
-a.submenu-title {
-  cursor: pointer;
-}
 
-
-.menu-button {
-  font-size:30px;
-  cursor:pointer;
-  position: absolute;
-  padding-top: 20px;
-  top: 0;
-  left: 0;
-  padding-left: 10px;
-}
-
-.drawer-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.drawer-menu a {
-    margin-left: 10px;
-    display: block;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-}
-
-.drawer-menu a:hover {
-    color: lightblue;
-}
-
-.drawer-menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
-.submenu {
-  overflow:hidden;
-  height: 0px;
-}
-.submenu a {
-    display:block;
-    margin-left: 10px;
-    font-size: 15px;
-    
-}
