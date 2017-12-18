@@ -11,9 +11,6 @@ body {
   width:60vw;
   height:100vh;
 }
-div.page {
-  background-color: lightblue;
-}
 
 .sidebar {
 	height:100vh;
@@ -36,13 +33,6 @@ div#sidebar-content {
   padding-top: 3em;
   padding-bottom: 3em;
 }
-div.page {
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
 
 p.post-header {
 letter-spacing: 2px;
@@ -183,9 +173,7 @@ a.submenu-title {
 	article.post-article {
 	max-height: 30vh;
 	}
-	.page-content {
-		width: 100vw;
-	}
+	
 	div.wrapper {
 		width: 100vw;
 		height: 40vh;
